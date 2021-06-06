@@ -29,7 +29,7 @@ void PushStack(struct Stack* s, StackDataType x)
 	if (s->top + 1 == s->capacity)
 	{
 		//À©ÈÝ
-		ExpanStack(&s);
+		ExpanStack(s);
 	}
 	//·ÅÔªËØ
 	s->top++;
@@ -43,7 +43,7 @@ StackDataType PopStack(Stack* s)
 	return ret;
 }
 
-int Exchange(char* ch)
+int Exchange(char ch)
 {
 	if (ch == '+')
 	{

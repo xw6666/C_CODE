@@ -1,6 +1,14 @@
 ﻿  Caculator.c
-E:\Codefield\c-language\Caculator\Caculator.c(32,16): warning C4047: “函数”:“Stack *”与“Stack **”的间接级别不同
-E:\Codefield\c-language\Caculator\Caculator.c(32,14): warning C4024: “ExpanStack”: 形参和实参 1 的类型不同
+E:\Codefield\c-language\Caculator\Caculator.c(46,19): warning C4028: 形参 1 与声明不同
   test.c
+E:\Codefield\c-language\Caculator\test.c(28,28): warning C4013: “strlen”未定义；假设外部返回 int
+E:\Codefield\c-language\Caculator\test.c(38,29): warning C4047: “函数”:“char *”与“char”的间接级别不同
+E:\Codefield\c-language\Caculator\test.c(38,26): warning C4024: “Exchange”: 形参和实参 1 的类型不同
+E:\Codefield\c-language\Caculator\test.c(42,34): warning C4047: “函数”:“char *”与“StackDataType”的间接级别不同
+E:\Codefield\c-language\Caculator\test.c(42,27): warning C4024: “Exchange”: 形参和实参 1 的类型不同
+E:\Codefield\c-language\Caculator\test.c(49,35): warning C4047: “函数”:“char *”与“StackDataType”的间接级别不同
+E:\Codefield\c-language\Caculator\test.c(49,28): warning C4024: “Exchange”: 形参和实参 1 的类型不同
+E:\Codefield\c-language\Caculator\test.c(49,60): warning C4047: “函数”:“char *”与“char”的间接级别不同
+E:\Codefield\c-language\Caculator\test.c(49,57): warning C4024: “Exchange”: 形参和实参 1 的类型不同
   正在生成代码...
   Caculator.vcxproj -> E:\Codefield\c-language\Caculator\Debug\Caculator.exe

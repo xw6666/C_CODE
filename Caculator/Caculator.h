@@ -8,12 +8,12 @@ typedef char StackDataType;
 //设置操作符优先级
 enum Operator
 {
-	RIGHT_PEREN,
-	ADD,
-	MIN,
-	MUL,
-	DIV,
-	LEFT_PEREN
+	RIGHT_PEREN = 0,
+	ADD = 1,
+	MIN = 1,
+	MUL = 2,
+	DIV = 2,
+	LEFT_PEREN = 3
 };
 
 //设置栈;

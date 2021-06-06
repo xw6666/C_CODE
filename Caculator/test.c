@@ -24,17 +24,29 @@ void caculator()
 	//如果是数字，直接跳过
 	//是字符，进栈，优先级更高才能进
 	char* suff = (char*)malloc(100 * sizeof(char));
-	for (int i = 0; i < strlen(userInput);)
+	int j = 0;
+	for (int i = 0; i < strlen(userInput);i++)
 	{
 		if (userInput[i] >= '0' && userInput[i] <= '9')
 		{
-			suff[i] = userInput[i];
-			i++;
+			suff[j] = userInput[i];
+			j++;
 		}
 		else
 		{
 			//优先级更高或者没有元素的时候进栈
-			if (Exchange(s.data[s.top]) < Exchange(userInput[i]) || s.top == -1)
+			if (Exchange(userInput[i]) == RIGHT_PEREN)
+			{
+				//如果是右括号一直出栈到左括号
+				PopStack(&s);
+				while (Exchange(s.data[s.top]) != LEFT_PEREN)
+				{
+					suff[j] = PopStack(&s);
+					j++;
+				}
+				PopStack(&s);
+			}
+			else if (Exchange(s.data[s.top]) < Exchange(userInput[i]) || s.top == -1)
 			{
 				PushStack(&s, userInput[i]);
 			}
@@ -43,11 +55,16 @@ void caculator()
 				//依次出栈之后进栈
 				while (s.top != -1)
 				{
-					s.data[s.top]
+					suff[j] = PopStack(&s);
+					j++;
 				}
+				//进栈
+				PushStack(&s, userInput[i]);
 			}
 		}
 	}
+	suff[j] = '\0';
+	printf("%s\n", suff);
 }
 
 void test()
