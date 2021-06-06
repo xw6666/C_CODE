@@ -1,0 +1,2 @@
+E:\Codefield\c-language\Caculator\Debug\Caculator.exe
+E:\Codefield\c-language\Caculator\Debug\Caculator.pdb

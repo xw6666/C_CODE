@@ -1,0 +1,6 @@
+﻿  Caculator.c
+E:\Codefield\c-language\Caculator\Caculator.c(32,16): warning C4047: “函数”:“Stack *”与“Stack **”的间接级别不同
+E:\Codefield\c-language\Caculator\Caculator.c(32,14): warning C4024: “ExpanStack”: 形参和实参 1 的类型不同
+  test.c
+  正在生成代码...
+  Caculator.vcxproj -> E:\Codefield\c-language\Caculator\Debug\Caculator.exe
