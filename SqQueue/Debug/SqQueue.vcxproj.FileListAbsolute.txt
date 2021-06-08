@@ -1,0 +1,2 @@
+E:\Codefield\c-language\SqQueue\Debug\SqQueue.exe
+E:\Codefield\c-language\SqQueue\Debug\SqQueue.pdb

@@ -1,0 +1,6 @@
+﻿  SqQueue.c
+  test.c
+  正在生成代码...
+E:\Codefield\c-language\SqQueue\SqQueue.c(82): warning C4715: “SearchQueue”: 不是所有的控件路径都返回值
+E:\Codefield\c-language\SqQueue\SqQueue.c(60): warning C4715: “DeQueue”: 不是所有的控件路径都返回值
+  SqQueue.vcxproj -> E:\Codefield\c-language\SqQueue\Debug\SqQueue.exe
