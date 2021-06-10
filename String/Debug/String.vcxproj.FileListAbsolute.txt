@@ -1,0 +1,2 @@
+E:\Codefield\c-language\String\Debug\String.exe
+E:\Codefield\c-language\String\Debug\String.pdb
