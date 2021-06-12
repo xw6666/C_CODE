@@ -44,6 +44,62 @@ char* SubString(char* sub, char* s, int pos, int len)
 	return sub;
 }
 
+//朴素的字符串匹配算法
+void Mystrstr(char* s, char* t)
+{
+	//双指针用于匹配
+	int i = 0;
+	int j = 0;
+	//当两个指针都在长度范围内才能进入循环
+	while (i < strlen(s) && j < strlen(t))
+	{
+		//如果相等，则匹配成功，各往后进一
+		//否则i回归到初始位置的下一位 j回归到0
+		if (s[i] == t[j])
+		{
+			i++;
+			j++;
+		}
+		else
+		{
+			i = i - j + 1;
+			j = 0;
+		}
+	}
+	
+	if (j == strlen(t))
+	{
+		printf("是\n");
+	}
+	else
+	{
+		printf("不是\n");
+	}
+}
+
+
+//kmp字符串匹配算法
+void Next(char* t,int* next)
+{
+	assert(t != 0);
+	next[0] = 0;
+	int len = strlen(t);
+	int cur = 1;
+	while (cur < len)
+	{    
+		//ababaaaba
+		if (t[0] != t[cur-1])
+		{
+			next[cur] = 1;
+		}
+		else
+		{
+			//找公共前后缀
+			next[cur] = next[cur - 1] + 1;
+		} 
+		cur++;
+	}
+}
 int main()
 {
 	//char* s = "abcde";
@@ -56,5 +112,14 @@ int main()
 	//printf("%s\n", s);
 	//printf("%c\n", *(++s));
 	//StrAssign(t, s);
+	char s[] = "ababaaaba";
+	//char t[] = "cde";
+	//Mystrstr(s, t);
+	int next[10] = { 0 };
+	Next(s, next);
+	for (int i = 0; i < 9; i++)
+	{
+		printf("%d ", next[i]);
+	}
 	return 0;
 }

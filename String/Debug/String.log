@@ -1,3 +1,5 @@
 ﻿  String.c
 E:\Codefield\c-language\String\String.c(32,2): warning C4018: “<=”: 有符号/无符号不匹配
+E:\Codefield\c-language\String\String.c(54,11): warning C4018: “<”: 有符号/无符号不匹配
+E:\Codefield\c-language\String\String.c(54,28): warning C4018: “<”: 有符号/无符号不匹配
   String.vcxproj -> E:\Codefield\c-language\String\Debug\String.exe
