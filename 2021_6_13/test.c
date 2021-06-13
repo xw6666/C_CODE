@@ -50,73 +50,99 @@
 
 //leetcode 28
 
-void getNext(int next[], char* str, int len)
-{
-	int i = 0;
-	int j = 1;
-	next[0] = 0;
-	while (j < len)
-	{
-		if (str[j] == str[i])
-		{
-			i++;
-			j++;
-			next[j - 1] = i;
-		}
-		else
-		{
-			if (i == 0)
-			{
-				j++;
-				next[j - 1] = 0;
-			}
-			else
-			{
-				i = next[i - 1];
-			}
-		}
-	}
-}
+//void getNext(int next[], char* str, int len)
+//{
+//	int i = 0;
+//	int j = 1;
+//	next[0] = 0;
+//	while (j < len)
+//	{
+//		if (str[j] == str[i])
+//		{
+//			i++;
+//			j++;
+//			next[j - 1] = i;
+//		}
+//		else
+//		{
+//			if (i == 0)
+//			{
+//				j++;
+//				next[j - 1] = 0;
+//			}
+//			else
+//			{
+//				i = next[i - 1];
+//			}
+//		}
+//	}
+//}
+//
+//int strStr(char* haystack, char* needle)
+//{
+//	if (strlen(needle) == 0)
+//	{
+//		return 0;
+//	}
+//
+//	//kmpËã·¨
+//	int i = 0;
+//	int j = 0;
+//	int len1 = strlen(haystack);
+//	int len2 = strlen(needle);
+//	int* next = (int*)malloc(sizeof(int) * len2);
+//	getNext(next, needle, len2);
+//	while (i < len1 && j < len2)
+//	{
+//		if (haystack[i] == needle[j])
+//		{
+//			i++;
+//			j++;
+//		}
+//		else
+//		{
+//			if (j == 0)
+//			{
+//				i++;
+//			}
+//			else
+//			{
+//				j = next[j - 1];
+//			}
+//		}
+//	}
+//	if (j == len2)
+//	{
+//		return i - len2;
+//	}
+//	else
+//	{
+//		return -1;
+//	}
+//}
 
-int strStr(char* haystack, char* needle)
-{
-	if (strlen(needle) == 0)
-	{
-		return 0;
-	}
-
-	//kmpËã·¨
-	int i = 0;
-	int j = 0;
-	int len1 = strlen(haystack);
-	int len2 = strlen(needle);
-	int* next = (int*)malloc(sizeof(int) * len2);
-	getNext(next, needle, len2);
-	while (i < len1 && j < len2)
-	{
-		if (haystack[i] == needle[j])
-		{
-			i++;
-			j++;
-		}
-		else
-		{
-			if (j == 0)
-			{
-				i++;
-			}
-			else
-			{
-				j = next[j - 1];
-			}
-		}
-	}
-	if (j == len2)
-	{
-		return i - len2;
-	}
-	else
-	{
-		return -1;
-	}
+//leetcode 704
+int search(int* nums, int numsSize, int target) {
+    int left = 0;
+    int right = numsSize - 1;
+    while (left < right)
+    {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target)
+        {
+            left = mid + 1;
+        }
+        else
+        {
+            right = mid;
+        }
+    }
+    if (nums[right] == target)
+    {
+        return right;
+    }
+    else
+    {
+        return -1;
+    }
 }
