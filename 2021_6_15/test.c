@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 //判断是否为奇数
 //int main()
 //{
@@ -182,5 +183,112 @@
 //	//getchar读取失败的时候会返回EOF
 //	//1.返回的字符，本质是字符也是ASCII码值，是整数
 //	//2.getchar函数不仅仅是返回正常字符，还会返回EOF，是-1，所以放在整型变量中
+//	return 0;
+//}
+
+//int main(void)
+//{
+//	int x, y, z;
+//	scanf("%d%d%d", &x, &y, &z);
+//	int temp = 0;
+//	if (y > x)
+//	{
+//		temp = x;
+//		x = y;
+//		y = temp;
+//	}
+//	if (z > y)
+//	{
+//		temp = y;
+//		y = z;
+//		z = temp;
+//	}
+//	if (y > x)
+//	{
+//		temp = x;
+//		x = y;
+//		y = temp;
+//	}
+//	printf("%d %d %d", x, y, z);
+//	return 0;
+//}
+
+//int main(void)
+//{
+//	int i = 3;
+//	for (i = 3; i <= 100; i+=3)
+//	{
+//		printf("%d ", i);
+//	}
+//	return 0;
+//}
+
+//辗转相除
+//int main(void)
+//{
+//	int x = 0;
+//	int y = 0;
+//	scanf("%d%d", &x, &y);
+//	if (x < y)
+//	{
+//		int temp = x;
+//		x = y;
+//		y = temp;
+//	}
+//	while (x % y != 0)
+//	{
+//		int r = x % y;
+//		x = y;
+//		y = r;
+//	}
+//	printf("%d\n", y);
+//	return 0;
+//}
+
+//int main(void)
+//{
+//	int i = 1000;
+//	for (i = 1000; i <= 2000; i++)
+//	{
+//		if ((i % 100 == 0) && (i % 400 != 0))
+//		{
+//			continue;
+//		}
+//		if (i % 4 == 0)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+
+//int isPrime(int x)
+//{
+//	int flag = 1;
+//	if (x <= 1)
+//	{
+//		flag = 0;
+//	}
+//	for (int i = 2; i <= sqrt(x); i++)
+//	{
+//		if (x % i == 0)
+//		{
+//			flag = 0;
+//		}
+//	}
+//	return flag;
+//}
+//
+//int main(void)
+//{
+//	int i = 0;
+//	for (i = 100; i <= 200; i++)
+//	{
+//		if (isPrime(i))
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	
 //	return 0;
 //}
