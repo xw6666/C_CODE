@@ -1,0 +1,2 @@
+E:\Codefield\c-language\dp\Debug\dp.exe
+E:\Codefield\c-language\dp\Debug\dp.pdb
