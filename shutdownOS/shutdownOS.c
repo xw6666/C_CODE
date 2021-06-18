@@ -11,9 +11,9 @@ int main()
 
 	while (1)
 	{
-		printf("请注意，你的计算机将在一分钟后关机，请输入我是猪以停止关机！\n");
+		printf("我是xw,请注意，你的计算机将在一分钟后关机，请输入 xw好帅 以停止关机！\n");
 		scanf("%s", input);
-		if (strcmp(input, "我是猪") == 0)
+		if (strcmp(input, "xw好帅") == 0)
 		{
 			system("shutdown -a");
 			break;
