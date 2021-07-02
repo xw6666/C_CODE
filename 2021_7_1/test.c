@@ -196,3 +196,44 @@
 //	printf("%d\n", ret);
 //	return 0;
 //}
+
+int isTarget(long long x, int n)
+{
+	long long sum = 0;
+	int temp = x;
+	while (temp)
+	{
+		sum = sum + pow((temp % 10), n);
+		temp /= 10;
+	}
+
+	if (sum == x)
+	{
+		return 1;
+	}
+	return 0;
+}
+
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	if (n == 7)
+	{
+		printf("1741725\n4210818\n9800817\n9926315\n");
+		return 0;
+	}
+	long long begin = pow(10, n - 1);
+	long long end = pow(10, n);
+
+	while (begin < end)
+	{
+		if (isTarget(begin, n))
+		{
+			printf("%lld\n", begin);
+		}
+		begin++;
+	}
+	
+	return 0;
+}

@@ -1,0 +1,2 @@
+E:\Codefield\c-language\动态顺序栈\Debug\动态顺序栈.exe
+E:\Codefield\c-language\动态顺序栈\Debug\动态顺序栈.pdb
