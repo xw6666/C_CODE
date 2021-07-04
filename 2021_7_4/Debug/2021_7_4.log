@@ -1,0 +1,6 @@
+﻿  test.c
+E:\Codefield\c-language\2021_7_4\test.c(354,17): warning C4022: “free”: 指针与实参 1 不匹配
+E:\Codefield\c-language\2021_7_4\test.c(355,25): warning C4047: “=”:“QueueElement”与“void *”的间接级别不同
+E:\Codefield\c-language\2021_7_4\test.c(358,17): warning C4022: “free”: 指针与实参 1 不匹配
+E:\Codefield\c-language\2021_7_4\test.c(359,25): warning C4047: “=”:“QueueElement”与“void *”的间接级别不同
+  2021_7_4.vcxproj -> E:\Codefield\c-language\2021_7_4\Debug\2021_7_4.exe
