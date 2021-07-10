@@ -98,7 +98,7 @@ typedef struct BinaryTreeNode
 //	PrevOrder(root->right);
 //}
 //
-////中序遍历
+////中序遍历 
 //void InOrder(BTNode* root)
 //{
 //
@@ -126,43 +126,79 @@ typedef struct BinaryTreeNode
 //	printf("%c ", root->data);
 //}
 //
-//int main()
+
+//void PrevOrder(BTNode* root, int* cnt)
 //{
-//	BTNode* A = (BTNode *)malloc(sizeof(BTNode));
-//	A->data = 'A';
-//	A->left = NULL;
-//	A->right = NULL;
-//
-//	BTNode* B = (BTNode*)malloc(sizeof(BTNode));
-//	B->data = 'B';
-//	B->left = NULL;
-//	B->right = NULL;
-//
-//	BTNode* C = (BTNode*)malloc(sizeof(BTNode));
-//	C->data = 'C';
-//	C->left = NULL;
-//	C->right = NULL;
-//
-//	BTNode* D = (BTNode*)malloc(sizeof(BTNode));
-//	D->data = 'D';
-//	D->left = NULL;
-//	D->right = NULL;
-//
-//	BTNode* E = (BTNode*)malloc(sizeof(BTNode));
-//	E->data = 'E';
-//	E->left = NULL;
-//	E->right = NULL;
+//	if(!root)
+//	{
+//		return;
+//	}
 //	
-//	A->left = B;
-//	A->right = C;
-//	B->left = D;
-//	B->right = E;
-//	A->right = C;
-//	//PrevOrder(A);
-//	//InOrder(A);
-//	PostOrder(A);
-//	return 0;
+//	*cnt = *cnt + 1;
+//	PrevOrder(root->left, cnt);
+//	PrevOrder(root->right, cnt);
 //}
+int BTNodeCount(BTNode* root)
+{
+	return (root == NULL ? 0 : (BTNodeCount(root->left) + BTNodeCount(root->right) + 1));
+}
+
+int TreeLeafSize(BTNode* root)
+{
+	if(root == NULL)
+	{
+		return 0;
+	}
+
+	if (root->left == NULL && root->right == NULL)
+	{
+		return 1;
+	}
+
+	return (TreeLeafSize(root->left) + TreeLeafSize(root->right));
+}
+
+int main()
+{
+	BTNode* A = (BTNode *)malloc(sizeof(BTNode));
+	A->data = 'A';
+	A->left = NULL;
+	A->right = NULL;
+
+	BTNode* B = (BTNode*)malloc(sizeof(BTNode));
+	B->data = 'B';
+	B->left = NULL;
+	B->right = NULL;
+
+	BTNode* C = (BTNode*)malloc(sizeof(BTNode));
+	C->data = 'C';
+	C->left = NULL;
+	C->right = NULL;
+
+	BTNode* D = (BTNode*)malloc(sizeof(BTNode));
+	D->data = 'D';
+	D->left = NULL;
+	D->right = NULL;
+
+	BTNode* E = (BTNode*)malloc(sizeof(BTNode));
+	E->data = 'E';
+	E->left = NULL;
+	E->right = NULL;
+	
+	A->left = B;
+	A->right = C;
+	B->left = D;
+	B->right = E;
+	//A->right = C;
+	//PrevOrder(A);
+	//InOrder(A);
+	//PostOrder(A);
+	//int cnt = 0;
+	//PrevOrder(A, &cnt);
+	int cnt = TreeLeafSize(A);
+	printf("%d\n", cnt);
+	return 0;
+}
 
 //leetcode - 707. 设计链表
 //typedef struct MyLinkedList {
