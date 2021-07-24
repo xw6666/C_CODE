@@ -3,6 +3,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#include  "Add.h"
+
+//导入静态库
+#pragma comment(lib, "Add.lib")
+
 //bool isPrime(int x)
 //{
 //	if (x < 2)
@@ -81,24 +86,32 @@
 //	printf("交换后：a = %d, b = %d\n", a, b);
 //}
 
-void Print(int x)
-{
-	int i = 0;
-	for (i = 1; i <= x; i++)
-	{
-		int j = 0;
-		for (j = 1; j <= i; j++)
-		{
-			printf("%d*%2d=%-4d", j, i, j * i);
-		}
-		printf("\n");
-	}
-}
+//void Print(int x)
+//{
+//	int i = 0;
+//	for (i = 1; i <= x; i++)
+//	{
+//		int j = 0;
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%d*%2d=%-4d", j, i, j * i);
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	Print(n);
+//	return 0;
+//}
 
 int main()
 {
-	int n = 0;
-	scanf("%d", &n);
-	Print(n);
+	int a = 5;
+	int b = 3;
+	printf("a + b = %d\n", Add(a, b));
 	return 0;
 }

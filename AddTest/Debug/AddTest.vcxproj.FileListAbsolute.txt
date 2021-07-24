@@ -1,0 +1,2 @@
+E:\Codefield\C_CODE\AddTest\Debug\AddTest.lib
+E:\Codefield\C_CODE\AddTest\Debug\AddTest.pdb
