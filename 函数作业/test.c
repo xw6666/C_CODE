@@ -108,10 +108,38 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int a = 5;
+//	int b = 3;
+//	printf("a + b = %d\n", Add(a, b));
+//	return 0;
+//}
+
+double Pow(int n, int k)
+{
+	if (k > 0)
+	{
+		return n * Pow(n, k - 1);
+	}
+	else if (k == 0)
+	{
+		return 1.0;
+	}
+	else
+	{
+		return 1.0 / Pow(n, -k);
+	}
+}
+
 int main()
 {
-	int a = 5;
-	int b = 3;
-	printf("a + b = %d\n", Add(a, b));
+	int n = 0;
+	int k = 0;
+	while (1)
+	{
+		scanf("%d%d", &n, &k);
+		printf("%lf", Pow(n, k));
+	}
 	return 0;
 }
