@@ -1,0 +1,4 @@
+﻿  test.c
+E:\Codefield\C_CODE\三子棋\test.c(27,31): warning C4047: “=”:“int”与“char *”的间接级别不同
+E:\Codefield\C_CODE\三子棋\test.c(34,31): warning C4047: “=”:“int”与“char *”的间接级别不同
+  三子棋.vcxproj -> E:\Codefield\C_CODE\三子棋\Debug\三子棋.exe

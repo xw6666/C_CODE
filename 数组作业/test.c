@@ -67,40 +67,121 @@
 //}
 
 #include <stdio.h>
-void Print(int n)
+//void Print(int n)
+//{
+//    int i = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        if (i == 0 || i == n - 1)
+//        {
+//            int j = 0;
+//            for (j = 0; j < n; j++)
+//            {
+//                printf("* ");
+//            }
+//        }
+//        else
+//        {
+//            printf("*");
+//            int j = 0;
+//            for (j = 0; j < 2 * n - 3; j++)
+//            {
+//                printf(" ");
+//            }
+//            printf("* ");
+//        }
+//        printf("\n");
+//    }
+//}
+//int main()
+//{
+//    int n = 0;
+//    while (scanf("%d", &n) != EOF)
+//    {
+//        Print(n);
+//        printf("\n");
+//    }
+//
+//    return 0;
+//}
+
+//void bubble_sort(int nums[], int numsSize)
+//{
+//	int i = 0;
+//	for (i = 0; i < numsSize - 1; i++)
+//	{
+//		int flag = 1;
+//		int j = 0;
+//		for (j = 0; j < numsSize - 1 - i; j++)
+//		{
+//			if (nums[j] > nums[j + 1])
+//			{
+//				flag = 0;
+//				int temp = nums[j];
+//				nums[j] = nums[j + 1];
+//				nums[j + 1] = temp;
+//			}
+//		}
+//
+//		if (1 == flag)
+//		{
+//			break;
+//		}
+//	}
+//}
+//
+//void Print(int nums[], int numsSize)
+//{
+//	int i = 0;
+//	for (i = 0; i < numsSize; i++)
+//	{
+//		printf("%d ", nums[i]);
+//	}
+//	printf("\n");
+//}
+//
+//int main()
+//{
+//	int arr[10] = { 4,9,2,7,3,1,8,6,5 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	bubble_sort(arr, sz);
+//	Print(arr, sz);
+//	system("pause");
+//	return 0;
+//}
+#define SIZE 9
+void Print(int nums[], int numsSize)
 {
-    int i = 0;
-    for (i = 0; i < n; i++)
-    {
-        if (i == 0 || i == n - 1)
-        {
-            int j = 0;
-            for (j = 0; j < n; j++)
-            {
-                printf("* ");
-            }
-        }
-        else
-        {
-            printf("*");
-            int j = 0;
-            for (j = 0; j < 2 * n - 3; j++)
-            {
-                printf(" ");
-            }
-            printf("* ");
-        }
-        printf("\n");
-    }
+	int i = 0;
+	for (i = 0; i < numsSize; i++)
+	{
+		printf("%d ", nums[i]);
+	}
+	printf("\n");
 }
+void exangeArray(int nums1[], int nums2[], int size)
+{
+	int i = 0;
+	for (i = 0; i < size; i++)
+	{
+		int temp = nums1[i];
+		nums1[i] = nums2[i];
+		nums2[i] = temp;
+	}
+}
+
 int main()
 {
-    int n = 0;
-    while (scanf("%d", &n) != EOF)
-    {
-        Print(n);
-        printf("\n");
-    }
+	int nums1[SIZE] = { 1,2,3,4,5,6,7,8,9 };
+	int nums2[SIZE] = { -9,-8,-7,-6,-5,-4,-3,-2,-1 };
+	int sz = SIZE;
+	printf("交换前：\n");
+	Print(nums1, sz);
+	Print(nums2, sz);
+	printf("交换后：\n");
+	exangeArray(nums1, nums2, sz);
+	Print(nums1, sz);
+	Print(nums2, sz);
 
-    return 0;
+	return 0;
 }

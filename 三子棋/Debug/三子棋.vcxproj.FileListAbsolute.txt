@@ -1,0 +1,2 @@
+E:\Codefield\C_CODE\三子棋\Debug\三子棋.exe
+E:\Codefield\C_CODE\三子棋\Debug\三子棋.pdb
