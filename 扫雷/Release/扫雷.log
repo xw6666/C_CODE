@@ -1,7 +1,7 @@
-﻿  test.c
-  game.c
+﻿  game.c
   正在生成代码
-  Previous IPDB not found, fall back to full compilation.
-  All 20 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  2 of 20 functions (10.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   扫雷.vcxproj -> E:\Codefield\C_CODE\扫雷\Release\扫雷.exe

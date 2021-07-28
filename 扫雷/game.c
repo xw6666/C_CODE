@@ -163,45 +163,19 @@ void zeroMine(char mine[ROWS][COLS], char show[ROWS][COLS], int x, int y)
     {
         //Õ¹¿ª
         show[x][y] = ' ';
-        
-        if ((x - 1 >= 1 && x - 1 <= (ROW) && y - 1 >= 1 && y - 1 <= (COL)) && show[x - 1][y - 1] == '*')
-        {
-            zeroMine(mine, show, x - 1, y - 1);
-        }
 
-        if ((x - 1 >= 1 && x - 1 <= (ROW) && y >= 1 && y <= (COL)) && show[x - 1][y] == '*')
+        for (int i = x - 1; i <= x + 1; i++)
         {
-            zeroMine(mine, show, x - 1, y);
-        }
-
-        if ((x - 1 >= 1 && x - 1 <= (ROW) && y + 1 >= 1 && y + 1 <= (COL)) && show[x - 1][y + 1] == '*')
-        {
-            zeroMine(mine, show, x - 1, y + 1);
-        }
-
-        if ((x >= 1 && x <= (ROW) && y - 1 >= 1 && y - 1 <= (COL)) && show[x][y - 1] == '*')
-        {
-            zeroMine(mine, show, x, y - 1);
-        }
-        
-        if ((x >= 1 && x <= (ROW) && y + 1 >= 1 && y + 1 <= (COL)) && show[x][y + 1] == '*')
-        {
-            zeroMine(mine, show, x, y + 1);
-        }
-
-        if ((x + 1 >= 1 && x + 1<= (ROW) && y - 1 >= 1 && y - 1 <= (COL)) && show[x + 1][y - 1] == '*')
-        {
-            zeroMine(mine, show, x + 1, y - 1);
-        }
-
-        if ((x + 1 >= 1 && x + 1 <= (ROW) && y >= 1 && y <= (COL)) && show[x + 1][y] == '*')
-        {
-            zeroMine(mine, show, x + 1, y);
-        }
-
-        if ((x + 1 >= 1 && x + 1 <= (ROW) && y + 1 >= 1 && y + 1 <= (COL)) && show[x + 1][y + 1] == '*')
-        {
-            zeroMine(mine, show, x + 1, y + 1);
+            for (int j = y - 1; j <= y + 1; j++)
+            {
+                if (x != i || y != j)
+                {
+                    if ((i >= 1 && i <= (ROW) && j >= 1 && j <= (COL)) && show[i][j] == '*')
+                    {
+                        zeroMine(mine, show, i, j);
+                    }
+                }
+            }
         }
     }
     else
