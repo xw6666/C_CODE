@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-//#include  <stdio.h>
+#include  <stdio.h>
 //
 //int my_strlen(char* str)
 //{
@@ -66,7 +66,7 @@
 //    return 0;
 //}
 
-#include <stdio.h>
+//#include <stdio.h>
 //void Print(int n)
 //{
 //    int i = 0;
@@ -149,39 +149,83 @@
 //	system("pause");
 //	return 0;
 //}
-#define SIZE 9
-void Print(int nums[], int numsSize)
+//#define SIZE 9
+//void Print(int nums[], int numsSize)
+//{
+//	int i = 0;
+//	for (i = 0; i < numsSize; i++)
+//	{
+//		printf("%d ", nums[i]);
+//	}
+//	printf("\n");
+//}
+//void exangeArray(int nums1[], int nums2[], int size)
+//{
+//	int i = 0;
+//	for (i = 0; i < size; i++)
+//	{
+//		int temp = nums1[i];
+//		nums1[i] = nums2[i];
+//		nums2[i] = temp;
+//	}
+//}
+//
+//int main()
+//{
+//	int nums1[SIZE] = { 1,2,3,4,5,6,7,8,9 };
+//	int nums2[SIZE] = { -9,-8,-7,-6,-5,-4,-3,-2,-1 };
+//	int sz = SIZE;
+//	printf("交换前：\n");
+//	Print(nums1, sz);
+//	Print(nums2, sz);
+//	printf("交换后：\n");
+//	exangeArray(nums1, nums2, sz);
+//	Print(nums1, sz);
+//	Print(nums2, sz);
+//
+//	return 0;
+//}
+
+void init(int* nums, int numsSize)
 {
-	int i = 0;
-	for (i = 0; i < numsSize; i++)
+	for (int i = 0; i < numsSize; i++)
+	{
+		nums[i] = 0;
+	}
+}
+
+void Print(int* nums, int numsSize)
+{
+	for (int i = 0; i < numsSize; i++)
 	{
 		printf("%d ", nums[i]);
 	}
 	printf("\n");
 }
-void exangeArray(int nums1[], int nums2[], int size)
+
+void reverse(int* nums, int numsSize)
 {
-	int i = 0;
-	for (i = 0; i < size; i++)
+	int left = 0;
+	int right = numsSize - 1;
+	while (left < right)
 	{
-		int temp = nums1[i];
-		nums1[i] = nums2[i];
-		nums2[i] = temp;
+		int temp = nums[left];
+		nums[left] = nums[right];
+		nums[right] = temp;
+		left++;
+		right--;
 	}
 }
 
 int main()
 {
-	int nums1[SIZE] = { 1,2,3,4,5,6,7,8,9 };
-	int nums2[SIZE] = { -9,-8,-7,-6,-5,-4,-3,-2,-1 };
-	int sz = SIZE;
-	printf("交换前：\n");
-	Print(nums1, sz);
-	Print(nums2, sz);
-	printf("交换后：\n");
-	exangeArray(nums1, nums2, sz);
-	Print(nums1, sz);
-	Print(nums2, sz);
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+	Print(arr, size);
+	reverse(arr, size);
+	Print(arr, size);
+	init(arr, size);
+	Print(arr, size);
 
 	return 0;
 }
