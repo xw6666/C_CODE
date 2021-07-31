@@ -1,0 +1,3 @@
+﻿  test.c
+E:\Codefield\C_CODE\操作符作业\test.c(145,36): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  操作符作业.vcxproj -> E:\Codefield\C_CODE\操作符作业\Debug\操作符作业.exe
