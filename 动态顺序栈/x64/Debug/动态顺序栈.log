@@ -1,0 +1,5 @@
+﻿  SqStack.c
+  test.c
+  正在生成代码...
+E:\Codefield\C_CODE\动态顺序栈\SqStack.c(60): warning C4715: “PopStack”: 不是所有的控件路径都返回值
+  动态顺序栈.vcxproj -> E:\Codefield\C_CODE\动态顺序栈\x64\Debug\动态顺序栈.exe

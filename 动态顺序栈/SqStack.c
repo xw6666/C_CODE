@@ -49,10 +49,30 @@ void PrintStack(SqStack* ps)
 	}
 }
 
-void PopStack(SqStack* ps)
+StackElement PopStack(SqStack* ps)
 {
 	if (ps->top > 0)
 	{
+		StackElement ret = ps->Stack[ps->top - 1];
 		ps->top--;
+		return ret;
+	}
+}
+
+bool EmptyStack(SqStack* ps)
+{
+	if (ps->top > 0)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+StackElement TopStack(SqStack* ps)
+{
+	if (ps->top > 0)
+	{
+		return ps->Stack[ps->top - 1];
 	}
 }

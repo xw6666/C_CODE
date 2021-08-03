@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #define N 4
 typedef int StackElement;
 
@@ -23,5 +24,11 @@ void PushStack(SqStack* ps, StackElement x);
 //打印栈中元素 - 栈顶到栈底
 void PrintStack(SqStack* ps);
 
-//出栈
-void PopStack(SqStack* ps);
+//出栈并返回栈顶元素
+StackElement PopStack(SqStack* ps);
+
+//判断栈是否为空 1为空
+bool EmptyStack(SqStack* ps);
+
+//查看栈顶元素
+StackElement TopStack(SqStack* ps);
