@@ -177,3 +177,43 @@ int del_substr(char* str, char const* substr)
 //}
 
 
+//Ñî»ÔÈı½Ç
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int dp[100][100];
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		for (int j = 0; j < i + 1; j++)
+//		{
+//			if (j == 0 || i == j)
+//			{
+//				dp[i][j] = 1;
+//			}
+//			else
+//			{
+//				dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
+//			}
+//			printf("%d ", dp[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+#include <stdio.h>
+int main()
+{
+	char killer = '0';
+	for (killer = 'A'; killer <= 'D'; killer++)
+	{
+		if (((killer != 'A') + (killer == 'C') + (killer == 'D') + (killer != 'D')) == 3)
+		{
+			printf("killer is %c\n", killer);
+		}
+	}
+
+	return 0;
+}
