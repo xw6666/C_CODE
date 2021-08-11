@@ -203,17 +203,34 @@ int del_substr(char* str, char const* substr)
 //	return 0;
 //}
 
-#include <stdio.h>
+//#include <stdio.h>
+//int main()
+//{
+//	char killer = '0';
+//	for (killer = 'A'; killer <= 'D'; killer++)
+//	{
+//		if (((killer != 'A') + (killer == 'C') + (killer == 'D') + (killer != 'D')) == 3)
+//		{
+//			printf("killer is %c\n", killer);
+//		}
+//	}
+//
+//	return 0;
+//}
 int main()
 {
-	char killer = '0';
-	for (killer = 'A'; killer <= 'D'; killer++)
-	{
-		if (((killer != 'A') + (killer == 'C') + (killer == 'D') + (killer != 'D')) == 3)
-		{
-			printf("killer is %c\n", killer);
-		}
-	}
+
+	int a[] = { 1,2,3,4 };
+	printf("%d\n", sizeof(a));  //16
+ 	printf("%d\n", sizeof(a + 0));//4
+	printf("%d\n", sizeof(*a));//4
+	printf("%d\n", sizeof(a + 1));//4
+	printf("%d\n", sizeof(a[1]));//4
+	printf("%d\n", sizeof(&a));//4
+	printf("%d\n", sizeof(*&a));//16
+	printf("%d\n", sizeof(&a + 1));//4
+	printf("%d\n", sizeof(&a[0]));//4
+	printf("%d\n", sizeof(&a[0] + 1));//4
 
 	return 0;
 }
