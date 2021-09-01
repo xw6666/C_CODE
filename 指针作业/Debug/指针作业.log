@@ -1,7 +1,5 @@
 ﻿  源.c
-E:\Codefield\C_CODE\指针作业\源.c(95,29): warning C4090: “函数”: 不同的“const”限定符
-E:\Codefield\C_CODE\指针作业\源.c(96,28): warning C4090: “函数”: 不同的“const”限定符
-E:\Codefield\C_CODE\指针作业\源.c(97,28): warning C4090: “函数”: 不同的“const”限定符
-E:\Codefield\C_CODE\指针作业\源.c(121,24): warning C4090: “return”: 不同的“const”限定符
-E:\Codefield\C_CODE\指针作业\源.c(136,30): warning C4090: “函数”: 不同的“const”限定符
+E:\Codefield\C_CODE\指针作业\源.c(306,20): warning C4047: “函数”:“int (*)[3]”与“int **”的间接级别不同
+E:\Codefield\C_CODE\指针作业\源.c(306,19): warning C4024: “matrixSearch”: 形参和实参 1 的类型不同
+E:\Codefield\C_CODE\指针作业\源.c(305,1): warning C4047: “初始化”:“int **”与“int (*)[3]”的间接级别不同
   指针作业.vcxproj -> E:\Codefield\C_CODE\指针作业\Debug\指针作业.exe
