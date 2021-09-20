@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="queue.c" />
     <ClCompile Include="test.c" />
+    <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="queue.h" />
