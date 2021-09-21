@@ -1,5 +1,5 @@
 ﻿  test.c
 E:\Codefield\C_CODE\字符串函数\test.c(10,20): warning C4018: “<”: 有符号/无符号不匹配
-E:\Codefield\C_CODE\字符串函数\test.c(21): warning C4716: “myMemmove”: 必须返回一个值
+E:\Codefield\C_CODE\字符串函数\test.c(22,21): warning C4018: “<”: 有符号/无符号不匹配
 E:\Codefield\C_CODE\字符串函数\test.c(14): warning C4716: “myMemcpy”: 必须返回一个值
   字符串函数.vcxproj -> E:\Codefield\C_CODE\字符串函数\Debug\字符串函数.exe
