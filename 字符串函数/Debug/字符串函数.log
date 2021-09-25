@@ -1,5 +1,7 @@
 ﻿  test.c
 E:\Codefield\C_CODE\字符串函数\test.c(10,20): warning C4018: “<”: 有符号/无符号不匹配
 E:\Codefield\C_CODE\字符串函数\test.c(22,21): warning C4018: “<”: 有符号/无符号不匹配
+E:\Codefield\C_CODE\字符串函数\test.c(71,15): warning C4090: “=”: 不同的“const”限定符
+E:\Codefield\C_CODE\字符串函数\test.c(149,2): warning C4002: 类函数宏的调用“assert”参数过多
 E:\Codefield\C_CODE\字符串函数\test.c(14): warning C4716: “myMemcpy”: 必须返回一个值
   字符串函数.vcxproj -> E:\Codefield\C_CODE\字符串函数\Debug\字符串函数.exe

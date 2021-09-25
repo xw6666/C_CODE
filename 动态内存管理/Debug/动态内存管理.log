@@ -1,0 +1,3 @@
+﻿  test.c
+E:\Codefield\C_CODE\动态内存管理\test.c(18,2): warning C4091: “typedef ”: 没有声明变量时忽略“s2”的左侧
+  动态内存管理.vcxproj -> E:\Codefield\C_CODE\动态内存管理\Debug\动态内存管理.exe
