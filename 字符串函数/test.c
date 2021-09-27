@@ -166,28 +166,51 @@ int myStrcmp(const char* string1, const char* string2)
 
 }
 
-
-int main()
+size_t myStrlen(const char* str)
 {
-	char str1[20] = "abcde";
-	char str2[] = "abcde";
-	//char* ret = myStrcat(str1, str2);
-	//
-	//printf("%s\n", ret);
-
-	int ret = myStrcmp(str1, str2);
-	if (ret > 0)
+	assert(str);
+	if (*str == '\0')
 	{
-		printf("s1 > s2");
-	}
-	else if (ret < 0)
-	{
-		printf("s1 < s2");
+		return 0;
 	}
 	else
 	{
-		printf("s1 == s2");
+		return 1 + strlen(str + 1);
 	}
+}
+
+
+//int main()
+//{
+//	char str1[20] = "abcdfe";
+//	char str2[] = "abcdf";
+//	//char* ret = myStrcat(str1, str2);
+//	//
+//	//printf("%s\n", ret);
+//
+//	int ret = myStrcmp(str1, str2);
+//	if (ret > 0)
+//	{
+//		printf("s1 > s2");
+//	}
+//	else if (ret < 0)
+//	{
+//		printf("s1 < s2");
+//	}
+//	else
+//	{
+//		printf("s1 == s2");
+//	}
+//
+//	return 0;
+//}
+
+int main()
+{
+	char str[] = "abcdef";
+	int len = myStrlen(str);
+	
+	printf("%d\n", len);
 
 	return 0;
 }
