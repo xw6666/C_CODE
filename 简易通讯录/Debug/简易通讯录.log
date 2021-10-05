@@ -1,2 +1,5 @@
 ﻿  test.cpp
-  简易通讯录.vcxproj -> E:\Codefield\C_CODE\简易通讯录\Debug\简易通讯录.exe
+test.obj : error LNK2019: 无法解析的外部符号 "void __cdecl add(struct Contact *)" (?add@@YAXPAUContact@@@Z)，函数 "void __cdecl test1(void)" (?test1@@YAXXZ) 中引用了该符号
+    已定义且可能匹配的符号上的提示:
+      _add
+E:\Codefield\C_CODE\简易通讯录\Debug\简易通讯录.exe : fatal error LNK1120: 1 个无法解析的外部命令
