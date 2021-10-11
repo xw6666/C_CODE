@@ -130,3 +130,15 @@
 //	return 0;
 //}
 
+
+#define SWAP_BIT(n) (n = (((n & 0x55555555) << 1) + ((n & 0xaaaaaaaa) >> 1)))
+
+int main()
+{
+	int a = 10;
+	printf("%d\n", a);
+	SWAP_BIT(a);
+	printf("%d\n", a);
+
+	return 0;
+}
